@@ -9,6 +9,7 @@ import { Product } from '../product';
 
 export class ProductlistComponent implements OnInit {
   productList: Array<Product>;
+  isAdmin: boolean = false; // set by login service
   constructor() {
     this.productList = new Array<Product>();
     let p1 = new Product(1, "Angular CookBook", "Techincal", 240, "assets/images/angular.jpg");

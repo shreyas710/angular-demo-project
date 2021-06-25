@@ -1,1 +1,16 @@
-<p>productlist works!</p>
+<h2>List of Products</h2>
+<table border="1">
+  <thead>
+    <th>Name</th>
+    <th>Price</th>
+  </thead>
+
+  <tr *ngFor="let product of productList">
+    <td>{{ product.name }}</td>
+    <td>{{ product.price | currency:'INR'}}</td>
+    <td><img [src]="product.imgPath" alt=""></td>
+    <td><button>Add To Cart</button></td>
+    <td *ngIf="isAdmin"><button>Delete</button></td>
+  </tr>
+
+</table>
