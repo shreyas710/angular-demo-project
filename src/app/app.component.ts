@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.component.html', // VIEW
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demoProject';
+  title = 'demoProject'; // MODEL
+
+  // CONTROLLER
 }
