@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
   password: string;
 
   constructor() {
-    this.username = "";
+    this.username = "guest";
     this.password = "";
   }
 
