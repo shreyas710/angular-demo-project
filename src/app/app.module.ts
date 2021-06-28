@@ -12,6 +12,7 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { MenuComponent } from './menu/menu.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PriceupdaterComponent } from './priceupdater/priceupdater.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     InventoryComponent,
     MenuComponent,
     PagenotfoundComponent,
+    PriceupdaterComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,10 +3,12 @@
   <thead>
     <th>Name</th>
     <th>Price</th>
-    <th>Delete</th>
+    <th>Update</th>
   </thead>
   <tr *ngFor="let product of products;">
     <td>{{product.name}}</td>
     <td>{{product.price | currency}}</td>
-    <td><button>Delete</button></td>
+    <td>
+      <app-priceupdater [pricevalue]="product.price" (update)="setNewPrice($event, product.id)"></app-priceupdater>
+    </td>
 </table>

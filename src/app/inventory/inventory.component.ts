@@ -16,4 +16,11 @@ export class InventoryComponent implements OnInit {
   ngOnInit(): void {
     this.products = this.pdataservice.getProductsList();
   }
+
+  setNewPrice(newprice: number, pid: number) { // refactor and move it to productsdataservice
+    for (var i = 0; i < this.products.length; ++i) {
+      if (this.products[i].id == pid)
+        this.products[i].price = newprice;
+    }
+  }
 }
