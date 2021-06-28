@@ -8,6 +8,6 @@
     <label>Enter Password:</label>
     <input type="password" name="password" [(ngModel)]="password" />
   </div>
-  <div><label></label><button>Login</button></div>
+  <div><label></label><button (click)="login()">Login</button></div>
 </form>
 Username value in the class: {{ username }}

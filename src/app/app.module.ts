@@ -13,6 +13,9 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { MenuComponent } from './menu/menu.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PriceupdaterComponent } from './priceupdater/priceupdater.component';
+import { HeaderComponent } from './header/header.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,14 @@ import { PriceupdaterComponent } from './priceupdater/priceupdater.component';
     MenuComponent,
     PagenotfoundComponent,
     PriceupdaterComponent,
+    HeaderComponent,
+    UserlistComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, // importing Routing Module
-    FormsModule
+    FormsModule,
+    HttpClientModule // provides methods (get, put,...)
   ],
   providers: [{ provide: ProductsdataService, useClass: BigbasketdataService }],
   bootstrap: [AppComponent]
