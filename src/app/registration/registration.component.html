@@ -1,0 +1,54 @@
+<div>
+  <div>
+    <form [formGroup]="signupForm">
+      <fieldset>
+        <legend>SignUp</legend>
+        <!-- Email Block -->
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input type="text" id="inputEmail" placeholder="Email" name="email" formControlName="email">
+        </div>
+        <!-- <div *ngIf="email.invalid&&email.touched">Email is invalid</div> -->
+
+        <!-- Password Block -->
+        <div>
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" id="inputPassword" placeholder="Password" name="password" formControlName="password">
+          </div>
+        </div>
+        <!-- <div *ngIf="pwd.invalid&&pwd.touched">
+          <div *ngIf="pwd.errors?.required">Password is mandatory</div>
+          <div *ngIf="pwd.errors?.minlength">Password has to be min 6 chars</div>
+        </div> -->
+
+        <div *ngIf="password?.invalid&&password?.touched">
+          <div *ngIf="password?.errors?.required">Password is mandatory</div>
+          <div *ngIf="password?.errors?.minlength">Password has to be min 6 chars</div>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+          <input type="text" id="country" placeholder="Country" name="country" formControlName="country">
+        </div>
+        <ul>
+          <li *ngFor="let k of keys">{{ k }}</li>
+        </ul>
+
+        <div class="form-group">
+          <label for="code">Code</label>
+          <input type="text" id="code" name="code" placeholder="Code" formControlName="code">
+        </div>
+        <div *ngIf="code?.errors?.invalidCode&&code?.touched">Code is invalid</div>
+
+        <!-- Buttons Block -->
+        <div class="form-group">
+          <label></label>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn btn-default">Cancel</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+<!-- {{ signup.value | json }} -->

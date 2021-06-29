@@ -1,3 +1,5 @@
+import { RegistrationComponent } from './registration/registration.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { InventoryComponent } from './inventory/inventory.component';
@@ -15,7 +17,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'products', component: ProductlistComponent },
   { path: 'inventory', component: InventoryComponent },
-  { path: 'users', component: UserlistComponent },
+  { path: 'reg', component: RegistrationComponent },
+  {
+    path: 'users', component: UserlistComponent, children: /* add child routes */[
+      { path: 'userdetails/:id', component: UserdetailsComponent }
+    ]
+  },
   { path: '**', component: PagenotfoundComponent }
 ];
 

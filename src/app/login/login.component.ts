@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit {
   username: string; // model
   password: string;
-  constructor(private auth: AuthService) {
+  constructor(private auth: AuthService, private router: Router) {
     this.username = "guest";
     this.password = "";
   }
@@ -22,5 +23,8 @@ export class LoginComponent implements OnInit {
   login() {
     // check for authentication
     this.auth.setUsername(this.username);
+
+    // navigate to /products
+    this.router.navigateByUrl('/products');
   }
 }
